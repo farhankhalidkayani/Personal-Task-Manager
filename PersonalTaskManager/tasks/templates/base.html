@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Task Tracker{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="{% url 'index' %}" class="logo">Task Tracker</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'tasks:task_list' %}">Tasks</a></li>
+                <li><a href="{% url 'tasks:add_task' %}">Add Task</a></li>
+                <li><form action="{% url 'logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn">Logout</button>
+</form></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            {% block content %}
+            <!-- Page-specific content will go here -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Personal Task Tracker. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>

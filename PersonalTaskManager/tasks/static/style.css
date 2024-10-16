@@ -1,0 +1,191 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    display: inline;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4a261;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* For links */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.btn-secondary {
+    background-color: #f44336; /* Red */
+}
+
+.btn-secondary:hover {
+    background-color: #e53935; /* Darker red */
+}
+
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+/* Add this CSS to your styles.css or equivalent file */
+
+table {
+    width: 100%; /* Ensure the table takes full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+    padding: 10px; /* Add padding to table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Add border to table cells */
+}
+
+.btn {
+    display: inline-block; /* Ensure the button displays inline */
+    padding: 8px 12px; /* Add padding for button size */
+    font-size: 14px; /* Font size for buttons */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Default button background color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline for links */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red color for delete button */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+@media (max-width: 600px) {
+    .btn {
+        font-size: 12px; /* Smaller font size on mobile */
+        padding: 6px 10px; /* Smaller padding */
+    }
+
+    /* Stack buttons on smaller screens */
+    td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align buttons to the start */
+    }
+}
